@@ -11,6 +11,7 @@ public class DBTest extends Configure {
 	public void dbConnect() throws Exception {
 		DataSource dataSource = (DataSource) ctx.getBean("dataSrouce");
 		Connection connection = (Connection) dataSource.getConnection();
+		
+		System.out.println(connection);
 	}
-	
 }
