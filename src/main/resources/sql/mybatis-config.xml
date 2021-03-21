@@ -4,13 +4,5 @@
  <settings>
 	<!-- 카멜케이스 -->
 	<setting name="mapUnderscoreToCamelCase" value="true"/>
-	<!-- 컬럼 자동매핑 -->
-	<setting name="autoMappingBehavior" value="PARTIAL" />
-
-	<setting name="jdbcTypeForNull" value="OTHER" />
-	<!-- 캐시 전역 사용 여부 -->
-	<setting name="cacheEnabled" value="true" />
-
-	<!-- vo설정 -->
  </settings>
 </configuration>
