@@ -2,20 +2,13 @@ package com.sample.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 import com.sample.vo.TestVO;
 
-@Repository
-public class TestDAO {
-
-    @Autowired
-    private SqlSession sqlSession;
+@Mapper
+public interface TestDAO {
 	
-	public List<TestVO> selectUserList() throws Exception {
-		return sqlSession.selectList("userMapper.selectUserList");
-	}
+	public List<TestVO> selectUserList() throws Exception;
 
 }

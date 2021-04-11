@@ -1,17 +1,10 @@
 package com.sample.vo;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-public class TestVO {
+public @Data class TestVO {
 
-	private String userId;
+	private String id;
 	
 	
 }
