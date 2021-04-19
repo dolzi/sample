@@ -6,10 +6,6 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	 </settings>
  	<typeAliases>
-		<typeAlias alias="TestVO" type="com.sample.vo.TestVO"/>
+		<typeAlias alias="TestVo" type="com.sample.vo.TestVo"/>
 	</typeAliases>
-	<!-- MyBatis mapper 파일이 추가될 때마다 지정해줘야 . --><!-- 
-	<mappers>
-		<mapper resource="/sql/mapper/user/UserMapper.xml"/>
-	</mappers> -->
 </configuration>

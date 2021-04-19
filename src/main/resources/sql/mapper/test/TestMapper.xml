@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sample.dao.TestDao">
+
+	<select id="selectUser" parameterType="TestVo" resultType="TestVo">
+		SELECT 
+			*
+		FROM 
+			USER_INFO
+		WHERE
+			ID = #{id}
+	</select>
+
+	<select id="selectUserList" resultType="TestVo">
+		SELECT 
+			*
+		FROM 
+			USER_INFO
+	</select>
+	
+	<insert id="insertUser" parameterType="TestVo">
+		INSERT INTO USER_INFO
+			(ID, PW, REG_DT, MOD_DT, REG_BY, MOD_BY)
+		VALUES
+			(#{id}, #{pw}, SYSDATE, '', #{regBy}, '')
+	</insert>
+	
+	<update id="updateUser" parameterType="TestVo">
+		UPDATE USER_INFO
+		SET 
+			PW = #{pw}
+			, MOD_DT = SYSDATE
+			, MOD_BY = #{modBy}
+		WHERE ID = #{id}
+	</update>
+	
+	<update id="deleteUser" parameterType="TestVo">
+		DELETE FROM USER_INFO
+		WHERE ID = #{id}
+	</update>
+
+</mapper>

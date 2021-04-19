@@ -1,11 +1,14 @@
-package com.sample.service;
+package com.sample.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import com.sample.vo.TestVo;
 
-public interface TestService {
-
+@Mapper
+public interface TestDao {
+	
 	TestVo selectUser(TestVo testVo) throws Exception;
 	
 	List<TestVo> selectUserList() throws Exception;
@@ -15,4 +18,5 @@ public interface TestService {
 	int updateUser(TestVo testVo) throws Exception;
 	
 	int deleteUser(TestVo testVo) throws Exception;
+
 }
