@@ -1,4 +1,4 @@
-package com.sample.controller;
+package com.sample.controller.rest;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import com.sample.service.TestService;
 import com.sample.vo.TestVo;
 
 @RestController
-public class TestController {
+public class CRUDTestRestController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
+	private static final Logger logger = LoggerFactory.getLogger(CRUDTestRestController.class);
 
 	@Autowired
 	private TestService testService;
@@ -70,6 +70,5 @@ public class TestController {
 		
 		return testService.deleteUser(testVo);
 	}
-	
 
 }
